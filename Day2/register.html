@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <table border="1" cellpadding="10" cellspacing="10">
+        <form action="register.html" method="POST" target="_self">
+            <tr>
+             <td>Name:</td>
+             <td><input type="text" name="name" id="urname" placeholder="Enter name" required></td>  
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" name="pass" id="password" minlength="4" maxlength="8" required></td>
+            </tr>
+            <tr>
+                <td>Ph.no:</td>
+                <td><input type="tel" name="phone" id="number"></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" name="email" id="mail" value="abc@gmail.com" readonly></td>
+            </tr>
+            <tr>
+                <td>Tech:</td>
+                <td>
+                    <select size="2" multiple>
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                        <option value="javascript">Javascript</option>
+                        <option value="python">Python</option>
+                        <option value="php">PHP</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Qualification:</td>
+                <td>
+                    BE<input type="checkbox" name="be" value="be">
+                    BTech<input type="checkbox" name="btech" id="btech">
+                </td>
+                
+            </tr>
+
+            <tr>
+                <td>Branch:
+                    <td>
+                    Comp<input type="radio" name="branch" value="computer">
+                    Entc<input type="radio" name="branch" value="entc">
+                    </td>
+                </td>
+            </tr>
+
+            <tr>
+                <td><input type="submit" value="submit"></td>
+                <td><input type="reset" value="reset"></td>
+            </tr>
+            
+        </form>
+    </table>
+</body>
+</html>
