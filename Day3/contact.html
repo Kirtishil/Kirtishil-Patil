@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>
+        body{
+            background-color: rosybrown;
+            color: red;
+            text-transform: uppercase;
+            border: royalblue;
+            padding: 12;
+            margin: 0cm;
+            font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+<body>
+    <table border="1" cellpadding="10" cellspacing="10">
+        <form action="contact.html" method="POST" target="_self">
+            <tr>
+             <td>Name:</td>
+             <td><input type="text" name="name" id="urname" value="Kirtishil Patil"></td>  
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" name="password" id="urpass" minlength="3" maxlength="8"></td>
+            </tr>
+            <tr>
+                <td>Ph.no:</td>
+                <td><input type="tel" name="phone" id="number"> </td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" name="email" id="4"></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td>
+                    Male:<input type="radio" name="gender" id="5" value="male">
+                    Female: <input type="radio" name="gender" id="5" value="female">
+                </td>
+            </tr>
+            <tr>
+                <td>About:</td>
+                <td><input type="text" name="about" id="6" placeholder="Enter about urself"></td>
+            </tr>
+            
+            <tr>
+                <td>
+                    <input type="reset" value="reset">
+                </td>
+                <td>
+                    <input type="submit" value="submit">
+                </td>
+            </tr>
+        </form>
+    </table>
+    <br>
+<footer><a href="index.html">Back to index</a></footer>
+</body>
+</html>
