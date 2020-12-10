@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+   
+       <style>
+          
+            .grid-container {
+            display: inline-grid;
+            grid-column-gap: 30px;
+            grid-row-gap: 20px;
+            grid-template-columns: auto auto auto auto auto;
+            grid-column-start: 1;
+             grid-column-end: 5;
+             justify-content: space-evenly;
+             align-content: center;
+            }
+
+            .start{
+                color: black;
+            }
+            
+       </style>
+  
+</head>
+<body>
+    <div class="start">
+        <div><textarea name="result" id="res" cols="30" rows="2"></textarea></div>
+    </div>
+    <br>
+    <div class="grid-container">
+        <div class="grid-item"><input type="button" value="1"></div>
+        <div class="grid-item"><input type="button" value="2"></div>
+        <div class="grid-item"><input type="button" value="3"></div>
+        <div class="grid-item"><input type="button" value="4"></div>
+        <div class="grid-item"><input type="button" value="5"></div>
+        <div class="grid-item"><input type="button" value="6"></div>
+        <div class="grid-item"><input type="button" value="7"></div>
+        <div class="grid-item"><input type="button" value="8"></div>
+        <div class="grid-item"><input type="button" value="9"></div>
+        <div class="grid-item"><input type="button" value="+"></div>
+        <div class="grid-item"><input type="button" value="-"></div>
+        <div class="grid-item"><input type="button" value="*"></div>
+        <div class="grid-item"><input type="button" value="/"></div>
+        <div class="grid-item"><input type="button" value="="></div>
+        <div class="grid-item"><input type="button" value="C"></div>
+      </div>
+</body>
+</html>
