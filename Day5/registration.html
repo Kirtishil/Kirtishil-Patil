@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <script>
+        var usernames=['Kirtishil', 'Sushil', 'Shailesh']
+        var uname=prompt('Enter Name');
+        flag=false;
+        for (let index = 0; index < usernames.length; index++) {
+            const element = usernames[index];
+            if(element==uname)
+            {
+                flag=true;
+                break;
+            }
+        }
+        if(flag)
+        {
+            alert("Username already exists");
+        }
+        else
+        {
+            alert("You are Registerd");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

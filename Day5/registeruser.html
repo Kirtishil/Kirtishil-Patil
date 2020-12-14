@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register User</title>
+    <script>
+        function validateuser()
+        {
+            usernames=['Sushil', 'Shailesh', 'Kirtishil']
+            var flag=1;
+            var user=document.getElementById("username").value;
+         
+         for(let index=0;index<usernames.length;index++)
+        {
+             if(user==usernames[index])
+            {   
+                flag=0
+                break
+            }
+            else{
+                flag=1; 
+            }
+         }
+         if(flag==0)
+         {
+            document.getElementById("mydiv").innerHTML="<br>Username already exists!";
+         }
+         else{
+            document.getElementById("mydiv").innerHTML="<br>Registered successfully!";
+         }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="username">
+    <button  onclick="validateuser()">click</button>
+    <div id="mydiv""></div>
+</body>
+</html>
