@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From</title>
+    <style>
+        body{
+            padding: 10px 20px;
+            margin: 30px;
+            /* border: 1px solid blue; */
+        }
+    </style>
+    <script>
+        function myfun()
+        {
+            var a=document.getElementById("username").value;
+             var b=document.getElementById("password").value;
+            // var c=document.myform.Email.value;
+            // var d=document.getElementById("number").value;
+            var valid=false;
+            var len=a.length;
+            var len2=b.length;
+            if(a=="")
+            {
+                alert("Enter name");
+                return false;
+            }
+            if(len<5 || len>15)
+            {
+                alert("name must be in 5 to 15 chars only");
+                return false;
+            }
+            
+             if(b=="")
+             {
+                alert("Enter password");
+                return false;
+            }
+            if(len2<3 || len2>8)
+            {
+                alert("password must be in 3 to 8 chars only");
+                return false;
+            }
+
+            // if(c.indexOf('@')<=0)
+            // {
+            //     alert("Invalid Email");
+            //     return false;
+            // }
+
+            // if(d=="")
+            // {
+            //     alert("enter mobile number");
+            //     return false;
+            // }
+            // if(isNaN(d))
+            // {
+            //     alert("Enter only digits");
+            //     return false;
+            // }
+            // if(d.lenght<10)
+            // {
+            //     alert("Mobile number must be 10 digit");
+            //     return false;
+            // }
+            // if(d.lenght>10)
+            // {
+            //     alert("Mobile number must be 10 digit");
+            //     return false;
+            // }
+            // if(d.charAt(0)!=9) && (d.charAt(0)!=8) &&(d.charAt(0)!=7)
+            // {
+            //     alert("Mobile numbe should start from 9 , 8 , 7");
+            //     return false;
+            // }
+            var x = document.myform.gender;
+            for (var index = 0; index < array.length; index++) {
+                if(x[index].checked)
+                {
+                    valid=true;
+                    break;
+                }
+            }
+            if(valid)
+            {
+                alert("done");
+            }
+            else
+            {
+                alert("select gender");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend>
+    <h1 style="color: blue;"><b>Registration Form</b></h1>
+        </legend>    
+    <form name="myform" onsubmit="return myfun()">
+        Username: <input type="text" id="username">
+        <br>
+        <br>
+         Password: <input type="password" id="password">
+        <br>
+        <br>
+        Email: <input type="email" name="Email">
+        <br>
+        <br>
+        Phone NO: <input type="text" id="number">
+        <br>
+        <br>
+        City:
+        <select name="menu" id="menu">
+            <option value="0">select</option>
+            <option value="1">Pune</option>
+            <option value="2">Mumbai</option>
+        </select>
+        <br>
+        <br>
+        Gender: <input type="radio" name="gender" value="male">Male
+                <input type="radio" name="gender" value="female">female
+                <br>
+                <br>
+        <input type="submit" value="submit">
+    </form>
+</fieldset>
+</body>
+</html>
