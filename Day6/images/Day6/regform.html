@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body{
+            display: inline-block;
+            margin: 50px 50px;
+            padding: 20px;
+            text-align: center;
+           background-color: bisque;
+           border: 3px solid green;
+        }
+        input{
+            color: blue;
+            border: 2px solid rgba(6, 2, 51, 0.993);
+        }
+    </style>
+    <script>
+            function val()
+            {
+            name= document.myform.name.value;
+            email= document.myform.email.value;
+            pass= document.myform.pass.value;
+            confirmpass= document.myform.confirmpass.value;
+            phone=document.myform.phone.value;
+            gender= document.myform.gender.value;
+            branch=document.myform.branch.value;
+            usernames=['ram','tom','jack','heet'];
+            var lowerCaseLetters = /[a-z]/g;
+            var upperCaseLetters = /[A-Z]/g;
+            var numbers = /[0-9]/g;
+            var special=  /^(?=.\d)(?=.[a-z])(?=.[A-Z])(?=.[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
+            function valName(name){
+                if (name==''){
+                    alert('enter a name');
+                    document.myform.name.focus();
+                    return false;
+                    
+                }
+               else if (name.length<3 ){
+                    alert('length greater than 3');
+                    document.myform.name.focus();
+                    return false;
+                }
+                 else if (name.length> 15){
+                    alert('length less than 15');
+                    document.myform.name.focus();
+                    return false;
+                }
+                else if (!validateUser(name)){
+                    return false;
+                }
+                else{
+                    return true;
+                }
+            }
+            flag=0;
+        function validateUser(name){
+            usernames=['Kirtishil', 'Sushil', 'Shailesh'];
+        for(key in usernames){
+        if (name==usernames[key]){
+            flag=1;}}
+            if (flag==1){
+           alert('name already exist');
+           return false;
+                   }
+                   else{
+        return true;
+        
+    }
+        
+        }
+            function valEmail(email){
+                if (email==''){
+                    alert('enter email');
+                    document.myform.email.focus();
+                    return false;
+                }
+                else{
+                    return true;
+                }
+            }
+            function valPhone(phone){
+                if (phone==''){
+                    alert('enter phone number');
+                    document.myform.phone.focus();
+                    return false;
+                }
+                else if((isNaN(phone))){
+                    alert('enter only digits in phone number')
+                    return false;
+                }
+                else if(phone.length!=10){
+                    alert('enter only 10 digits in phone number')
+                    return false;
+                }
+                else{
+                    return true;
+                }
+            }
+            function valPass(pass)
+            {
+                if (pass==''){
+                    alert('enter a password');
+                    document.myform.pass.focus();
+                    return false;
+                    
+                }
+                else  if(!(pass.match(lowerCaseLetters))) {
+                    alert('one lowercase required in password')
+                    return false;
+                }
+                else  if(!(pass.match(upperCaseLetters))) {
+                    alert('one uppercase required in password')
+                    return false;
+                }
+                else  if(!(pass.match(numbers))) {
+                    alert('one number required in password')
+                    return false;
+                }
+                else  if(!(pass.match(special))) {
+                    alert('one special charater required in password')
+                    return false;
+                }
+               else if (pass.length<3 ){
+                    alert('enter a passsword with length greater than 3');
+                    document.myform.pass.focus();
+                    return false;
+                }
+                else{
+                    return true;
+                }
+            
+            }
+function valGen(gender){
+    if(gender==''){
+        alert("select a gender");
+                    document.myform.gender[0].clicked();
+                    return false;
+    }
+    else {
+    
+        return true;
+    }
+}
+function valBranch(branch){
+    if(branch==''){
+        alert("select a branch");
+                    document.myform.branch.clicked();
+                    return false;
+    }
+    else {
+    
+        return true;
+    }
+}
+            if(valName(name)&& valEmail(email) && valPass(pass)&& valPhone(phone)&&valGen(gender)&&valBranch(branch))
+            alert("you have successfully registered");
+            
+            
+        }
+    </script>
+</head>
+<body>
+    <form name="myform" action="con.html"><br>
+        Username: <input type="text" name="name" ><br>
+        <br>  
+        Email: <input type="email" name="email"><br>
+        <br>
+        Phone number: <input type="text" name="phone"><br>
+        <br>
+        Password: <input type="password" name="pass"><br>
+        <br>
+        Gender: <input type="radio" name="gender" value="male">male
+        <input type="radio" name="gender" value="female">female<br>
+        <br>
+        Branch: <select name="branch" id="branch">
+            <option value="">Select</option>
+            <option value="cse">CSE</option>   
+            <option value="it">IT</option>  
+             </select><br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <input type="button" name="submit" value="submit" onclick=val()>
+
+    </form>
+</body>
+</html>
