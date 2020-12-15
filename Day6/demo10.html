@@ -6,8 +6,10 @@
     <title>From</title>
     <style>
         body{
-            padding: 10px 20px;
-            margin: 30px;
+            padding: 60px 40px;
+            margin: 50px;
+            width: 900px;
+            height: 900px;
             /* border: 1px solid blue; */
         }
     </style>
@@ -74,23 +76,25 @@
             //     alert("Mobile numbe should start from 9 , 8 , 7");
             //     return false;
             // }
-            var x = document.myform.gender;
-            for (var index = 0; index < array.length; index++) {
-                if(x[index].checked)
-                {
-                    valid=true;
-                    break;
-                }
-            }
-            if(valid)
-            {
-                alert("done");
-            }
-            else
-            {
-                alert("select gender");
-                return false;
-            }
+
+            // var x = document.myform.gender;
+            // for (var index = 0; index < array.length; index++) {
+            //     if(x[index].checked)
+            //     {
+            //         valid=true;
+            //         break;
+            //     }
+            // }
+            // if(valid)
+            // {
+            //     alert("done");
+            // }
+            // else
+            // {
+            //     alert("select gender");
+            //     return false;
+            // }
+
         }
     </script>
 </head>
@@ -100,31 +104,55 @@
     <h1 style="color: blue;"><b>Registration Form</b></h1>
         </legend>    
     <form name="myform" onsubmit="return myfun()">
-        Username: <input type="text" id="username">
-        <br>
-        <br>
-         Password: <input type="password" id="password">
-        <br>
-        <br>
-        Email: <input type="email" name="Email">
-        <br>
-        <br>
-        Phone NO: <input type="text" id="number">
-        <br>
-        <br>
-        City:
-        <select name="menu" id="menu">
-            <option value="0">select</option>
-            <option value="1">Pune</option>
-            <option value="2">Mumbai</option>
-        </select>
-        <br>
-        <br>
-        Gender: <input type="radio" name="gender" value="male">Male
-                <input type="radio" name="gender" value="female">female
-                <br>
-                <br>
-        <input type="submit" value="submit">
+        <table style="color:red; background-color: bisque; text-align: center;" >
+            <tr>
+                <td>
+                    Username: <input type="text" id="username" required placeholder="Enter ur name">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <br>
+                    Password: <input type="password" id="password" required placeholder="3 to 8">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <br>
+                    Email: <input type="email" name="Email" placeholder="abc@ex.com">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <br>
+                   Phone NO: <input type="text" id="number">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <br>
+                    City:
+                    <select name="menu" id="menu">
+                        <option value="0">select</option>
+                        <option value="1">Pune</option>
+                        <option value="2">Mumbai</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <br><br><br><br>
+                    Gender: <input type="radio" name="gender" value="male" required>Male
+                    <input type="radio" name="gender" value="female" required>female
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <br>
+                    <input type="submit" value="submit" style="height: 30px; width: 100px; border: 1px solid purple; padding: 6px; background-color: aquamarine; color:darkblue;">
+                </td>
+            </tr>
+        </table>
     </form>
 </fieldset>
 </body>
