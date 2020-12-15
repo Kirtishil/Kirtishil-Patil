@@ -1,0 +1,51 @@
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DropDown</title>
+    <script>
+        var laptop = ["Lenovo", "Acer", "Dell"];
+        var mobile = ["One Plus", "Apple", "Samsung", "MI"];
+        var tv = ["Samsung", "MI"];
+        function list() 
+        {
+            ch = document.getElementById("view").value;
+            var dd = document.getElementById("mydiv");
+            switch (ch) {
+                case '1':
+                    dd.innerHTML = "<b><u>Welcome to ABC Showroom</u></b><br>"
+                    laptop.forEach((element)=> 
+                    {
+                        dd.innerHTML += "~ "+element + "<br>";
+
+                    });
+                    break;
+                case '2':
+
+                    dd.innerHTML = "<b><u>Welcome to ABC Showroom</u></b><br>"
+
+                    mobile.forEach((element)=>
+                    {
+                        dd.innerHTML += "~ "+element + "<br>";
+                    });
+                    break;
+                case '3':
+                    dd.innerHTML = "<b><u>Welcome to ABC Showroom</u></b><br>"
+                    tv.forEach((element)=> 
+                    {
+                        dd.innerHTML += "~ "+element + "<br>";
+                    });
+            }
+        }
+    </script>
+</head>
+<body>
+       Select: <select name="menu" id="view" onchange="list()">
+            <option value="0"></option>
+            <option value="1">Laptop</option>
+            <option value="2">Mobile</option>
+            <option value="3">TV</option>
+        </select>
+        <div id="mydiv"></div>
+</body>
+</html>
